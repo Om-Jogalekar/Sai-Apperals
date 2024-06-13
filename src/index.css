@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    color: #000;
+   
+}
+
+.title{
+
+    font-family: "Bodoni Moda", serif;;
+}
