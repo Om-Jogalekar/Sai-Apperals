@@ -11,7 +11,7 @@ export default function About() {
             <img className='absolute lg:-top-14 lg:left-20 -left-4 -top-16 lg:w-[150px] p-5 w-[130px] object-cover' src="Images/img2.jpg" alt="" />
           </div>
         </div>
-        <div className='lg:w-1/2 '>
+        <div className='lg:w-1/2 p-3'>
           <h2 className='text-2xl text-center font-bold'>About Us</h2>
           <p className=''>
 
