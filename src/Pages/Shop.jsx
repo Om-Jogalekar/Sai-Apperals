@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../Components/Navbar'
+import Footer from '../Components/Footer';
 import { useMediaQuery } from 'react-responsive';
 import { VscSettings } from "react-icons/vsc";
 import { IoIosAdd } from "react-icons/io";
@@ -77,7 +78,7 @@ export default function Shop() {
               <div className='mx-10 p-5 flex flex-wrap gap-28'>
                 {data.map((p) => (
                   <div>
-                    <img src={p.image} className=' w-80 h-[400px]' />
+                    <img src={p.image} className=' w-80 h-[400px] object-cover' />
                     <div className='w-80'>
                       <h3 className=' font-semibold text-center text-lg'>{p.title}</h3>
                       <p className='text-center'>{p.description}</p>
@@ -87,7 +88,9 @@ export default function Shop() {
               </div>
             </div>
           </div>
-        </div>) : (
+          <Footer/>  
+        </div>
+        ) : (
         <div>
           {/* sreachBar */}
           <div>
@@ -162,6 +165,7 @@ export default function Shop() {
             ))}
           </div>
           {/* footer */}
+          <Footer/>
         </div>
       )
       }
