@@ -18,7 +18,7 @@ export default function About() {
 
             <p>Welcome to <span className=' font-bold'>Sayee Apperals</span> , where innovation meets elegance in every stitch. Founded by the talented fashion designer Sanika Adhav, our brand is dedicated to creating unique, high-quality fashion pieces that make a statement.<br/></p>
 
-           <h1 className='m-2 font-bold'> Our Founder: Sanika Adhav</h1>
+           <h1 className='m-2 font-bold'> Our Founder: Sanika Ganesh Adhav</h1>
             Sanika Adhav, a distinguished graduate with a BSc in Fashion Designing, has carved her niche in the fashion industry with her exceptional skills and creative vision. Her journey in fashion began with her debut at the prestigious India Design Week in Mumbai in April 2019, followed by a captivating showcase at the Kalakaar Factory in Nashik in February 2020. These experiences have honed her ability to craft designs that resonate with contemporary trends while maintaining timeless appeal.
 
             <h1 className='m-2 font-bold'>Our Philosophy</h1>

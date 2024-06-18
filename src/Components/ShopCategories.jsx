@@ -6,19 +6,19 @@ export default function ShopCategories() {
   const slides = [
     {
       img: "Images/product7.jpg",
-      title:"Title1"
+      title:"Indian Wear"
     },
     {
       img: "Images/product2.jpg",
-      title:"Title1"
+      title:"Frok"
     },
     {
       img: "Images/product3.jpg",
-      title:"Title1"
+      title:"Bridal"
     },
     {
       img: "Images/product1.jpg",
-      title:"Title1"
+      title:"Festival"
     }
   ]
 
