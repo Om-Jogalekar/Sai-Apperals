@@ -14,7 +14,7 @@ export default function ShopCategories() {
       img: "Images/product3.jpg"
     },
     {
-      img: "Images/product5.jpg"
+      img: "Images/product7.jpg"
     }
   ]
 
