@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 export default function ShopCategories() {
   const slides = [
     {
-      img: "Images/product1.jpg"
+      img: "Images/product7.jpg"
     },
     {
       img: "Images/product2.jpg"
@@ -14,7 +14,7 @@ export default function ShopCategories() {
       img: "Images/product3.jpg"
     },
     {
-      img: "Images/product7.jpg"
+      img: "Images/product1.jpg"
     }
   ]
 
