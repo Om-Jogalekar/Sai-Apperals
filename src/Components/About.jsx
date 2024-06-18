@@ -16,10 +16,10 @@ export default function About() {
           <p className=''>
 
 
-            <p>Welcome to <span className=' font-bold'>Sayee Apperals</span> , where innovation meets elegance in every stitch. Founded by the talented fashion designer Sanika Adhav, our brand is dedicated to creating unique, high-quality fashion pieces that make a statement.<br/></p>
+            <p>Welcome to <span className=' font-bold'>Sayee Apperals</span> , where innovation meets elegance in every stitch. Founded by the talented fashion designer Sanika Ganesh Adhav, our brand is dedicated to creating unique, high-quality fashion pieces that make a statement.<br/></p>
 
            <h1 className='m-2 font-bold'> Our Founder: Sanika Ganesh Adhav</h1>
-            Sanika Adhav, a distinguished graduate with a BSc in Fashion Designing, has carved her niche in the fashion industry with her exceptional skills and creative vision. Her journey in fashion began with her debut at the prestigious India Design Week in Mumbai in April 2019, followed by a captivating showcase at the Kalakaar Factory in Nashik in February 2020. These experiences have honed her ability to craft designs that resonate with contemporary trends while maintaining timeless appeal.
+            Sanika Ganesh Adhav, a distinguished graduate with a BSc in Fashion Designing, has carved her niche in the fashion industry with her exceptional skills and creative vision. Her journey in fashion began with her debut at the prestigious India Design Week in Mumbai in April 2019, followed by a captivating showcase at the Kalakaar Factory in Nashik in February 2020. These experiences have honed her ability to craft designs that resonate with contemporary trends while maintaining timeless appeal.
 
             <h1 className='m-2 font-bold'>Our Philosophy</h1>
             At Sayee Apperals, we believe in the power of customization and the importance of staying ahead of fashion trends. Sanika's innovative ideas in stitching, sketching, and drawing ensure that every piece we create is a work of art. We pride ourselves on our meticulous attention to detail and uncompromising commitment to quality, ensuring that each garment not only meets but exceeds your expectations.<br />
