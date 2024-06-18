@@ -5,16 +5,20 @@ import { useNavigate } from 'react-router-dom';
 export default function ShopCategories() {
   const slides = [
     {
-      img: "Images/product7.jpg"
+      img: "Images/product7.jpg",
+      title:"Title1"
     },
     {
-      img: "Images/product2.jpg"
+      img: "Images/product2.jpg",
+      title:"Title1"
     },
     {
-      img: "Images/product3.jpg"
+      img: "Images/product3.jpg",
+      title:"Title1"
     },
     {
-      img: "Images/product1.jpg"
+      img: "Images/product1.jpg",
+      title:"Title1"
     }
   ]
 
@@ -31,7 +35,7 @@ export default function ShopCategories() {
               </div>
               <div className=' absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70 duration-500'></div>
               <div className='absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[50%] group-hover:translate-y-0 transition-all duration-500'>
-                <h1 className='text-white lg:text-3xl font-bold'>Beuty</h1>
+                <h1 className='text-white lg:text-3xl font-bold'>{i.title}</h1>
                 <p className=' text-lg italic text-white mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error asperiores modi, odit culpa natus nemo. Nesciunt, aliquam</p>
                 <button className=' rounded-full shadow shadow-black/60 bg-neutral-500 mt-4 py-2 px-3.5 text-sm capitalize text-white' onClick={()=>{navigate("/shop")}}>
                   see More
