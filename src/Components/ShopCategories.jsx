@@ -1,54 +1,181 @@
-import React from 'react';
-import About from './About';
-import { useNavigate } from 'react-router-dom';
+// import React from 'react';
+// import About from './About';
+// import { useNavigate } from 'react-router-dom';
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+// import Slider from "react-slick";
+// import { GrLinkNext , GrLinkPrevious } from "react-icons/gr";
 
-export default function ShopCategories() {
+// function SampleNextArrow(props) {
+//   const { className, style, onClick } = props;
+//   return (
+//     <GrLinkNext className={className} style={{...style , display : "block" , fontSize:"100px"}} onClick={onClick}/>
+//   );
+// }
+
+// function SamplePrevArrow(props) {
+//   const { className, style, onClick } = props;
+//   return (
+//     <GrLinkPrevious className={className} style={{...style , display : "block" , fontSize:"100px"}} onClick={onClick}/>
+//   );
+// }
+
+// export default function ShopCategories() {
+//   const slides = [
+//     {
+//       img: "Images/product7.jpg",
+//       title:"Indian Wear"
+//     },
+//     {
+//       img: "Images/product2.jpg",
+//       title:"Frok"
+//     },
+//     {
+//       img: "Images/product3.jpg",
+//       title:"Bridal"
+//     },
+//     {
+//       img: "Images/product1.jpg",
+//       title:"Festival"
+//     }
+//   ]  
+
+//   const settings = {
+//     dots: true,
+//     infinite: true,
+//     speed: 500,
+//     slidesToShow: 3,
+//     slidesToScroll: 3,
+//     nextArrow: <SampleNextArrow />,
+//     prevArrow: <SamplePrevArrow />
+//   };
+//   return (
+//     <div className="slider-container w-3/4 m-auto mt-20">
+//       <Slider {...settings}>
+//          {slides.map((p)=>(
+//             <div className='flex justify-center items-center'>
+//               <img src={p.img} className='w-[10'/>
+//           </div>
+//          ))}
+//       </Slider>
+//     </div>
+//   );
+// }
+
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import { GrLinkNext, GrLinkPrevious } from "react-icons/gr";
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <GrLinkNext className={className} style={{...style , display : "block" , fontSize:"100px"}} onClick={onClick}/>
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <GrLinkPrevious className={className} style={{...style , display : "block" , fontSize:"100px"}} onClick={onClick}/>
+  );
+}
+
+function ShopCategories() {
+  const navigate = useNavigate(); // To handle navigation on button click
+
   const slides = [
     {
+      id: 1, // Add unique IDs for product identification
       img: "Images/product7.jpg",
-      title:"Indian Wear"
+      title: "Indian Wear",
+      price: 19.99, // Add price information
     },
     {
+      id: 2,
       img: "Images/product2.jpg",
-      title:"Frok"
+      title: "Frock",
+      price: 24.50,
     },
     {
+      id: 3,
       img: "Images/product3.jpg",
-      title:"Bridal"
+      title: "Bridal",
+      price: 99.99,
     },
     {
+      id: 4,
       img: "Images/product1.jpg",
-      title:"Festival"
-    }
-  ]
+      title: "Festival",
+      price: 39.95,
+    },
+  ];
 
-  const navigate = useNavigate();
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    autoplay:true,
+    autoplaySpeed: 1000,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+          nextArrow: <SampleNextArrow />,
+          prevArrow: <SamplePrevArrow />
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+          nextArrow: <SampleNextArrow />,
+          prevArrow: <SamplePrevArrow />
+        }
+      }
+    ]
+    }
+
+  // Function to handle "Add to Cart" button click (example logic)
+  const handleAddToCart = (productId) => {
+    console.log('Product with ID', productId, 'added to cart!'); // Replace with your cart implementation
+    // You can potentially navigate to a cart page or display a success message here
+  };
+
   return (
     <div>
-      <h1 className='font-bold mt-24 flex justify-center my-10 lg:text-3xl text-xl p-3 '>Collection By Sayee</h1>  
-        <div className='flex flex-wrap lg:justify-between justify-center gap-3  lg:ml-44 lg:w-3/4'>
-          {slides.map((i) => (
-            <>
-            <div className='group relative items-center justify-between overflow-hidden hover:shadow-xl hover:shadow-black/30 transition-shadow rounded-xl'>
-              <div className='lg:h-96 lg:w-60 h-96 w-56'>
-                <img className='h-full w-full object-cover group-hover:rotate-2 group-hover:scale-125 transition-transform duration-300' src={i.img} alt="" />
+      <h1 className='text-3xl font-thin text-center mt-32'>On Sale</h1>
+    <div className="slider-container lg:w-[80%] w-full m-auto mt-10 mb-10">
+      <Slider {...settings}>
+        {slides.map((product) => (
+          <div key={product.id}> {/* Use product.id for unique keys */}
+            <div className="product-card">
+              <img src={product.img} alt={product.title} className='lg:w-[350px] lg:h-[400px] w-[200px] h-[250px] object-cover p-3'/>
+              <div className="product-info">
+                <p>{product.title}</p>
+                <span>₹{product.price.toFixed(2)}</span> {/* Format price to two decimal places */}
               </div>
-              <div className=' absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70 duration-500'></div>
-              <div className='absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[50%] group-hover:translate-y-0 transition-all duration-500'>
-                <h1 className='text-white lg:text-3xl font-bold'>{i.title}</h1>
-                <p className=' text-lg italic text-white mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error asperiores modi, odit culpa natus nemo. Nesciunt, aliquam</p>
-                <button className=' rounded-full shadow shadow-black/60 bg-neutral-500 mt-4 py-2 px-3.5 text-sm capitalize text-white' onClick={()=>{navigate("/shop")}}>
-                  see More
-                </button>
-              </div>
+              <button onClick={() => handleAddToCart(product.id)}>Add to Cart</button>
             </div>
-              
-            </>
-          ))}
-        </div>
-      <div>
-        <About/>
-      </div>
+          </div>
+        ))}
+      </Slider>
     </div>
-  )
+  </div>
+  );
 }
+
+export default ShopCategories;

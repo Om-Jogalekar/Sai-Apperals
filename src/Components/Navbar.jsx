@@ -12,7 +12,7 @@ export default function Navbar() {
             
         <div className='lg:mx-40 px-5 flex justify-between items-center'>
             <IoIosSearch className='text-2xl'/>
-            <img src="Images/mainLogo.png" alt="" width={200}/>
+            <img src="Images/mainLogo.png" alt="" width={150}/>
             <CiShoppingCart className='text-2xl'/>
         </div>
         <div>

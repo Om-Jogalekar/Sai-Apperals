@@ -23,7 +23,7 @@ export default function Shop() {
     <div>
       <Navbar />
       {isLGScreen ? (
-        <div className='lg:w-[80%] lg:mx-40 mt-5'>
+        <div className='lg:w-[80%] lg:ml-44  mt-5'>
           <h1 className='text-4xl font-thin flex justify-center p-5'>On Sale</h1>
           <div className='flex'>
             <div className='w-[20%] shadow-lg'>
@@ -88,7 +88,6 @@ export default function Shop() {
               </div>
             </div>
           </div>
-          <Footer/>  
         </div>
         ) : (
         <div>
@@ -165,10 +164,11 @@ export default function Shop() {
             ))}
           </div>
           {/* footer */}
-          <Footer/>
+          
         </div>
       )
-      }
+      } 
+      <Footer/>  
     </div>
   )
 }

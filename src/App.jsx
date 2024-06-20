@@ -2,6 +2,7 @@ import Home from "./Pages/Home"
 import {BrowserRouter , Routes , Route} from 'react-router-dom'
 import Shop from "./Pages/Shop"
 import ContactUs from "./Pages/ContactUs"
+
 export default function App() {
   return (
       <>

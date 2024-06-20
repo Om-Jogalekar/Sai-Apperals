@@ -12,3 +12,12 @@
 
     font-family: "Bodoni Moda", serif;;
 }
+
+.slick-next{
+    color: black;
+    font-size: 10%;
+}
+.slick-prev{
+    color: black;
+    font-size: 10%;
+}
