@@ -24,7 +24,7 @@ export default function Shop() {
       <Navbar />
       {isLGScreen ? (
         <div className='lg:w-[80%] lg:ml-44  mt-5'>
-          <h1 className='text-4xl font-thin flex justify-center p-5'>On Sale</h1>
+          <h1 className='text-4xl font-thin flex justify-center p-5'>Design By Sayee </h1>
           <div className='flex'>
             <div className='w-[20%] shadow-lg'>
               <div>
@@ -77,7 +77,7 @@ export default function Shop() {
             <div className="w-[80%]">
               <div className='mx-10 p-5 flex flex-wrap gap-28'>
                 {data.map((p) => (
-                  <div>
+                  <div >
                     <img src={p.image} className=' w-80 h-[400px] object-cover' />
                     <div className='w-80'>
                       <h3 className=' font-semibold text-center text-lg'>{p.title}</h3>
@@ -97,10 +97,10 @@ export default function Shop() {
           </div>
           {/* Label */}
           <div className='flex justify-center items-center'>
-            <h1 className='text-4xl font-thin'>On Sale</h1>
+            <h1 className='text-4xl font-thin'>Design By Sayee</h1>
           </div>
           {/* filter bar */}
-          <div className={`border relative border-black mt-10 w-[80%] mx-14`}>
+          <div className={`border relative border-black mt-10 w-3/4 ml-10`}>
             <button className='flex items-center gap-2 p-5 text-2xl' onClick={() => setToggleFilter(!toggleFilter)}>
               <VscSettings />
               <span>Filters</span>
@@ -152,19 +152,17 @@ export default function Shop() {
             </div>
           </div>
           {/* productCards */}
-          <div className='mt-10 ml-5'>
+          <div className='p-3 flex flex-wrap gap-5  mt-10 ml-1'>
             {data.map((p) => (
-              <div className='flex justify-center items-center'>
-                <img src={p.image} className='w-[50%] p-4' />
-                <div className='w-[50%]'>
+              <div>
+                <img src={p.image} className=' w-40 h-35 items-center' />
+                <div className='w-40'>
                   <h3 className=' font-semibold text-lg hover:text-blue-500'>{p.title}</h3>
                   <h2>₹{p.price}</h2>
                 </div>
               </div>
             ))}
-          </div>
-          {/* footer */}
-          
+          </div>      
         </div>
       )
       } 

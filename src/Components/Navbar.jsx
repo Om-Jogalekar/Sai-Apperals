@@ -3,6 +3,7 @@ import { IoIosSearch } from "react-icons/io";
 import { CiShoppingCart } from "react-icons/ci";
 import { useState } from 'react' 
 import { useNavigate } from 'react-router-dom';
+import { IoMdHeartEmpty } from "react-icons/io";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -13,10 +14,13 @@ export default function Navbar() {
         <div className='lg:mx-40 px-5 flex justify-between items-center'>
             <IoIosSearch className='text-2xl'/>
             <img src="Images/mainLogo.png" alt="" width={150}/>
+            <div className='flex gap-2'>
             <CiShoppingCart className='text-2xl'/>
+            <IoMdHeartEmpty className='text-2xl'/>
+            </div>
         </div>
         <div>
-            <div className='relative inline-block flex justify-center items-center gap-5'>
+            <div className='bg-slate-100 p-2 relative inline-block  flex justify-center items-center gap-10'>
                 <h1 className=' hover:underline underline-offset-4 ' onClick={()=>{navigate("/")}}>Home</h1>
                 <button onClick={() => setIsOpen(!isOpen)}>
                   <h1 className='inline-flex hover:underline underline-offset-4'>Catalog</h1>
