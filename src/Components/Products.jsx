@@ -94,7 +94,7 @@ export default function Products() {
 
   return (
     <div>
-      <h1 className='text-3xl font-thin md:ml-32 ml-2 md:mt-32 mt-28'>On Sale</h1>
+      <h1 className='text-3xl font-thin text-center'>On Sale</h1>
     <div className="slider-container lg:w-[80%] w-full m-auto my-9 mb-10">
       <Slider {...settings}>
         {slides.map((product) => (
@@ -103,7 +103,7 @@ export default function Products() {
               <img src={product.img} alt={product.title} className='lg:w-[350px] lg:h-[400px] w-[200px] h-[250px] object-cover group-hover:scale-125 transition-all duration-700'/>
               <div className="w-full h-full  absolute bg-black/20 -bottom-10 opacity-0 group-hover:opacity-100 group-hover:bottom-0 transition-all duration-500  flex flex-col justify-center items-center ">
                 <p className='text-white font-bold'>{product.title}</p>
-                <button className='text-white' onClick={() => handleAddToCart(product.id)}>See More</button>
+                <button className='text-white' onClick={() => navigate("/shop")}>See More</button>
               </div>
             </div>
           </div>

@@ -5,7 +5,8 @@ import { IoLogoWhatsapp } from "react-icons/io";
 export default function Footer() {
   return (
     <div className="bg-black/90 text-gray-300">
-      <h1 className='p-6 text-[30px] lg:p-14 lg:text-[50px]'>Life Etc. <hr/></h1>
+      <h1 className='p-4 md:text-[30px] text-2xl md:p-10'>Style is always in fashion...</h1>
+      <hr/>
       <div className='grid grid-cols-1 gap-4 p-6 lg:grid-cols-4 lg:p-5 lg:ml-14'>
         <div className='flex justify-center items-center lg:justify-start'>
           <ul className='text-2xl space-y-4 flex lg:flex-col'>

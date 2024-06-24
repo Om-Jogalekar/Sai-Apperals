@@ -5,6 +5,7 @@ import { useMediaQuery } from 'react-responsive';
 import { VscSettings } from "react-icons/vsc";
 import { IoIosAdd } from "react-icons/io";
 import { FiMinus } from "react-icons/fi";
+import { useNavigate } from 'react-router-dom';
 export default function Shop() {
   const isLGScreen = useMediaQuery({ query: '(min-width: 1024px)' });
   const [accordionPrice, setAccordionPrice] = useState(false);
@@ -13,6 +14,7 @@ export default function Shop() {
   const [toggleFilter, setToggleFilter] = useState(false);
   const [data, setData] = useState([]);
 
+  const navigate = useNavigate();
   useEffect(() => {
     fetch('/product.json')
       .then(response => response.json())
@@ -80,7 +82,7 @@ export default function Shop() {
                   <div >
                     <img src={p.image} className=' w-80 h-[400px] object-cover' />
                     <div className='w-80'>
-                      <h3 className=' font-semibold text-center text-lg'>{p.title}</h3>
+                      <button className=' font-semibold text-center text-lg' onClick={()=>navigate('/productdetails')}>{p.title}</button>
                       <p className='text-center'>{p.description}</p>
                     </div>
                   </div>
@@ -157,7 +159,7 @@ export default function Shop() {
               <div>
                 <img src={p.image} className=' w-40 h-35 items-center' />
                 <div className='w-40'>
-                  <h3 className=' font-semibold text-lg hover:text-blue-500'>{p.title}</h3>
+                  <button className=' font-semibold text-lg hover:text-blue-500' onClick={()=>navigate('/productdetails')}>{p.title}</button>
                   <h2>₹{p.price}</h2>
                 </div>
               </div>

@@ -1,87 +1,39 @@
-// import React from 'react'
-// import Slider from "react-slick";
+import React from 'react'
+import Navbar from '../Components/Navbar'
+import Footer from '../Components/Footer'
 
-
-// export default function ContactUs() {
-
-//   const slides = [
-//     {
-//       img: "https://asinboutique.com/cdn/shop/files/6EA1F930-9313-47F0-9702-90CD0F43ADF9.jpg?v=1718518079",
-//       title:"Indian Wear"
-//     },
-//     {
-//       img: "https://asinboutique.com/cdn/shop/files/6EA1F930-9313-47F0-9702-90CD0F43ADF9.jpg?v=1718518079",
-//       title:"Frok"
-//     },
-//     {
-//       img: "https://asinboutique.com/cdn/shop/files/6EA1F930-9313-47F0-9702-90CD0F43ADF9.jpg?v=1718518079",
-//       title:"Bridal"
-//     },
-//     {
-//       img: "https://asinboutique.com/cdn/shop/files/6EA1F930-9313-47F0-9702-90CD0F43ADF9.jpg?v=1718518079",
-//       title:"Festival"
-//     }
-//   ]
-
-//   const settings = {
-//     dots: true,
-//     infinite: false,
-//     speed: 500,
-//     slidesToShow: 3,
-//     slidesToScroll: 3
-//   };
-//   return (
-//     <div>
-//       <div className="w-3/4 m-auto">
-//       <Slider {...settings}>
-//           {slides.map((slide)=>(
-//             <div>
-//               <img key={slide} src={slide.img}/>
-//             </div>
-//           ))}
-//           </Slider>r
-//         </div>  
-//     </div>
-//   )
-// }
-
-
-import React, { Component } from "react";
-import Slider from "react-slick";
-
-export default class ContactUs extends Component {
-  render() {
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 2,
-      slidesToScroll: 1
-    };
-    return (
-      <div>
-        <h2> Single Item</h2>
-        <Slider {...settings}>
-          <div>
-            <h3>1</h3>
+export default function ContactUs() {
+  return (
+    <>
+      <Navbar/>
+      <div className='mb-[100vh]'>
+        <div>
+          <h1 className='text-center p-10 text-[40px] font-thin'>Contact Us</h1>
+          <div className='flex flex-col justify-center items-center shadow-xl shadow-gray-300 rounded-lg p-9 md:w-[500px] w-3/4 m-auto space-y-5'>
+            <div>
+              <input className='border border-black p-3 rounded-md md:w-96' type="text" placeholder='Name'/>
+            </div>
+            <div>
+            <input className='border border-black p-3 rounded-md md:w-96' type="email" placeholder='Email'/>
+            </div>
+            <div>
+            <input className='border border-black p-3 rounded-md md:w-96' type="text" placeholder='Phone number'/>
+            </div>
+            <div>
+              <textarea className='border border-black p-3 rounded-md md:w-96' name="Comments" placeholder='Comments' cols="24" rows="5"></textarea>
+            </div>
+            <div>
+              <button className=' bg-black text-white p-3 rounded-md md:w-96'>Submit</button>
+            </div>
           </div>
-          <div>
-            <h3>2</h3>
+          <div className='p-5 flex flex-col justify-center items-center'>
+            <h1 className='p-5 text-3xl underline underline-offset-[10px]'>Let's connect with us!</h1>
+            <h1 className='px-5 p-2 text-xl'>Email:<span className=' font-semibold underline underline-offset-2'> sayeeapperals@gmail.com</span></h1>
+            <h1 className='px-5 p-3 text-xl'>Phone No.: <span className=' font-semibold '> +91 9999999999</span></h1>
           </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-        </Slider>
+        </div>
       </div>
-    );
-  }
+      <Footer/>
+    </>
+  )
 }
