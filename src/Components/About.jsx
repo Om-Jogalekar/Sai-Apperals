@@ -20,7 +20,7 @@ export default function About() {
 
             Choose <span className='font-semibold'>Sayee Apperals</span> for: <br />
             - <span className='font-semibold'>Innovative Designs:</span> Stay ahead with trendsetting fashion. <br />
-            - <samp className='font-semibold'>Custom Creations:</samp>Express your individuality with bespoke pieces. <br />
+            - <span className='font-semibold'>Custom Creations:</span>Express your individuality with bespoke pieces. <br />
             - <span className='font-semibold'>Uncompromised Quality:</span> Enjoy the finest materials and craftsmanship. <br />
 
             Join us and let your wardrobe reflect your unique style with [Your Fashion Brand Name].

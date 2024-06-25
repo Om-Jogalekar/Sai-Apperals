@@ -157,7 +157,7 @@ function ShopCategories() {
 
   return (
     <div>
-      <h1 className='text-3xl font-thin text-center mt-20'>Design By Sayee</h1>
+      <h1 className='text-3xl font-thin text-center mt-28'>Design By Sayee</h1>
     <div className="slider-container lg:w-[80%] w-full m-auto my-9 mb-10">
       <Slider {...settings}>
         {slides.map((product) => (
