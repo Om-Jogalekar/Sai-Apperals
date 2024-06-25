@@ -26,25 +26,25 @@ export default function Products() {
   const slides = [
     {
       id: 1, // Add unique IDs for product identification
-      img: "Images/product7.jpg",
+      img: "Images/product4.jpg",
       title: "Indian Wear",
       price: 19.99, // Add price information
     },
     {
       id: 2,
-      img: "Images/product2.jpg",
+      img: "Images/product7.jpg",
       title: "Frock",
       price: 24.50,
     },
     {
       id: 3,
-      img: "Images/product3.jpg",
+      img: "Images/product2.jpg",
       title: "Bridal",
       price: 99.99,
     },
     {
       id: 4,
-      img: "Images/product1.jpg",
+      img: "Images/product3.jpg",
       title: "Festival",
       price: 39.95,
     },
@@ -54,7 +54,7 @@ export default function Products() {
     dots: true,
     infinite: true,
     speed: 500,
-    // autoplay:true,
+    autoplay:true,
     autoplaySpeed: 2000,
     slidesToShow: 4,
     slidesToScroll: 4,
