@@ -23,7 +23,7 @@ export default function About() {
             - <span className='font-semibold'>Custom Creations:</span>Express your individuality with bespoke pieces. <br />
             - <span className='font-semibold'>Uncompromised Quality:</span> Enjoy the finest materials and craftsmanship. <br />
 
-            Join us and let your wardrobe reflect your unique style with [Your Fashion Brand Name].
+            Join us and let your wardrobe reflect your unique style with Sayee Apperals.
           </p>
         </div>
       </div>
